@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random song selector</title>
+</head>
+
+<body>
+
+	<script>
+	function pickASong() {
+		var songs = [		
+			"Nirvana - Come As You Are",
+			"Green Day - Revolution Radio",
+			"Green Day - Holiday",
+			"Nirvana - In Bloom",
+			"Green Day - 21 Guns",
+			"Kelly Clarkson - Because Of You"
+			];
+		var id = Math.floor(Math.random() * songs.length); 
+		document.getElementById("number").innerHTML = id;
+		document.getElementById("song").innerHTML = songs[id];
+	}
+	window.onload = pickASong;
+	</script>
+	
+	<table border="0">	
+    <col width="25px" />
+    <col width="500px" />
+    <col width="100px" />
+	<tr>
+	<td><div id="number"></div></td>
+	<td><div id="song"> </div></td>
+	<td><button onclick="pickASong()">Get random song</button> </td>
+	</tr>
+	</table>
+</body>
+</html>
